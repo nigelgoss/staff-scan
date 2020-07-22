@@ -90,7 +90,7 @@
 			if (xhr.status == 200) $success(JSON.parse(xhr.responseText));
 			spinner(false);
 		};
-		xhr.open("GET", "/$/api.txt?employeeno=" + $employeeno, true);
+		xhr.open("GET", "$/api.json?employeeno=" + $employeeno, true);
 		xhr.send();
 		spinner(true);
 		
