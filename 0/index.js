@@ -227,6 +227,66 @@
 		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
 		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
 		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
+		
+		fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
+		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
+		legend = document.createElement("legend"); fieldset.appendChild(legend); legend.textContent = "Fit Mask Testing";
 	};
 	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
