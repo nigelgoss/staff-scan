@@ -76,7 +76,7 @@
 	let img = document.createElement("img"); section.appendChild(img);
 	img.src = "resources/logo.png";
 	
-	const banner = document.createElement("section"); header.appendChild(section);
+	const banner = document.createElement("section"); header.appendChild(banner);
 	banner.ngstyle = {"margin":"5px 0 5px 0", "padding":"5px", "background-color":"#005EB8", "color":"#FFFFFF", "display":"grid", "grid-template-columns":"auto 1fr", "grid-gap":"10px", "place-items":"center"};	
 				
 	const main = document.createElement("main"); document.body.appendChild(main);
