@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
 
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
@@ -60,10 +60,12 @@
 	
 	document.body.ngstyle = {"font-family":"Arial", "font-size":"10pt"};
 	
-	const header = document.createElement("header"); document.body.appendChild(header);
-	header.ngstyle = {"display":"grid", "grid-template-columns":"1fr auto"};
+	let header = document.createElement("header"); document.body.appendChild(header);
 	
-	let button = document.createElement("button"); header.appendChild(button);
+	let section = document.createElement("section"); header.appendChild(section);
+	section.ngstyle = {"display":"grid", "grid-template-columns":"1fr auto"};
+	
+	let button = document.createElement("button"); section.appendChild(button);
 	button.ngstyle = {"background-color":"#00a499", "color":"#FFFFFF", "border":"2px solid #FFFFFF", "border-radius":"10px"};
 	let span = document.createElement("span"); button.appendChild(span); 
 	span.className = "faS";
@@ -71,9 +73,12 @@
 	button.appendChild(document.createTextNode(" Scan"));
 	button.ngpointerdown = () => { scan(); };
 	
-	let img = document.createElement("img"); header.appendChild(img);
+	let img = document.createElement("img"); section.appendChild(img);
 	img.src = "resources/logo.png";
 	
+	const banner = document.createElement("section"); header.appendChild(section);
+	banner.ngstyle = {"margin":"5px 0 5px 0", "padding":"5px", "background-color":"#005EB8", "color":"#FFFFFF", "display":"grid", "grid-template-columns":"auto 1fr", "grid-gap":"10px", "place-items":"center"};	
+				
 	const main = document.createElement("main"); document.body.appendChild(main);
 
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -116,24 +121,22 @@
 	
 	const build = ($d) => {
 	
+		banner.textContent = "";
 		main.textContent = "";
 		
-		let section = document.createElement("section"); main.appendChild(section);
-		section.ngstyle = {"margin":"5px 0 5px 0", "padding":"5px", "background-color":"#005EB8", "color":"#FFFFFF", "display":"grid", "grid-template-columns":"auto 1fr", "grid-gap":"10px", "place-items":"center"};
-		
-		let img = document.createElement("img"); section.appendChild(img);
+		let img = document.createElement("img"); banner.appendChild(img);
 		img.ngstyle = {"grid-row":"span 3", "width":"80px", "border-radius":"100%", "border":"2px solid #FFFFFF"};
 		img.src = "resources/user.jpg";
 		
-		let div = document.createElement("div"); section.appendChild(div);
+		let div = document.createElement("div"); banner.appendChild(div);
 		div.textContent = $d[0][0].Name;
 		div.ngstyle = {"font-size":"1.2em", "text-align":"center", "font-weight":"bold"};
 		
-		div = document.createElement("div"); section.appendChild(div);
+		div = document.createElement("div"); banner.appendChild(div);
 		div.textContent = $d[0][0].Role;
 		div.ngstyle = {"text-align":"center"};
 		
-		div = document.createElement("div"); section.appendChild(div);
+		div = document.createElement("div"); banner.appendChild(div);
 		div.textContent = $d[0][0].Department;
 		div.ngstyle = {"text-align":"center"};
 		
