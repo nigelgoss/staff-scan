@@ -58,7 +58,8 @@
 		"fieldset div { border-top:1px solid grey; padding:10px; }",
 	].join("\n");
 	
-	document.body.ngstyle = {"font-family":"Arial", "font-size":"10pt", "display":"flex", "flex-direction":"column", "overflow":"hidden"};
+	document.documentElement.ngstyle = {"height":"100%"};
+	document.body.ngstyle = {"font-family":"Arial", "font-size":"10pt", "display":"flex", "flex-direction":"column", "overflow":"hidden", "height":"100%", "margin":"0"};
 	
 	let header = document.createElement("header"); document.body.appendChild(header);
 	header.ngstyle = {"flex":"0 0 auto"};
