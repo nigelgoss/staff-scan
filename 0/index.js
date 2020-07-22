@@ -87,14 +87,10 @@
 		const xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState !== 4) return;
-			//if (xhr.status == 200) $success(JSON.parse(xhr.responseText));
-			$success([
-				[{"Name":"Nigel Goss", "Role":"Application Development Manager", "Department":"Systems Development"}],
-				[{"A":{"Tested":"01 Jan 2020", "Status":"Pass"},"B":{"Tested":"01 Jan 2020", "Status":"Fail"}}]
-			]);
+			if (xhr.status == 200) $success(JSON.parse(xhr.responseText));
 			spinner(false);
 		};
-		xhr.open("GET", "api.php?employeeno=" + $employeeno, true);
+		xhr.open("GET", "/$/api.txt?employeeno=" + $employeeno, true);
 		xhr.send();
 		spinner(true);
 		
