@@ -66,6 +66,7 @@
 	
 	let style = document.createElement("style"); document.head.appendChild(style);
 	style.textContent = [
+		"@keyframes transformRotate { 0% { transform:rotate(0deg); } 100% { transform:rotate(359deg); } }",
 		".faS { font-family:FASolid; font-size:1.1em; }",
 		"table tr:not(:first-of-type) { border-top: 1px solid grey;}",
 		"td { padding:5px; }",
