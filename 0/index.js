@@ -67,7 +67,8 @@
 	let style = document.createElement("style"); document.head.appendChild(style);
 	style.textContent = [
 		".faS { font-family:FASolid; font-size:1.1em; }",
-		"fieldset div { border-top:1px solid grey; padding:10px; }",
+		"table tr:not(:first-of-type) { border-top: 1px solid grey;}",
+		"td { padding:5px; }",
 	].join("\n");
 	
 	document.documentElement.ngstyle = {"height":"100%"};
