@@ -94,7 +94,8 @@
 			if (xhr.status == 200) $success(JSON.parse(xhr.responseText));
 			spinner(false);
 		};
-		xhr.open("GET", "$/api.json?employeeno=" + $employeeno, true);
+		let url = ($employeeno === "999999999") ? "https://nigelgoss.github.io/staff-scan/$/api.json" : "https://sddev.hilldomain.thh.nhs.uk/staff-scan/$/api.php";
+		xhr.open("GET", url + "?employeeno=" + $employeeno, true);
 		xhr.send();
 		spinner(true);
 		
