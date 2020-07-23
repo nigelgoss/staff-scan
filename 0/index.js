@@ -86,10 +86,6 @@
 				
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
-	const barcode = ($success, $failure) => { return $success({"text":1234}); };
-
-	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-	
 	const query = ($employeeno, $success) => {
 
 		const xhr = new XMLHttpRequest();
@@ -292,7 +288,11 @@
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	const scan = () => {
-		barcode($d => { query($d.text, $d => { build($d); }); });
+		if (typeof cordova !== "undefined") {
+			cordova.plugins.barcodeScanner.scan($d => { query($d.text, $d => { build($d); }); });
+		} else {
+			query({"text":"999999999"}, $d => { build($d); });
+		};
 	};
 
 })();
