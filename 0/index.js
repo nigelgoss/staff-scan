@@ -106,7 +106,7 @@
 			if (xhr.status === 200) $success(JSON.parse(xhr.responseText));
 			spinner(false);
 		};
-		xhr.open("GET", $.root + "api." + (($.root.indexOf("github") > -1) ? "json" : "php") + "?employeeno=" + $employeeno, true);
+		xhr.open("GET", $.root + "$/api." + (($.root.indexOf("github") > -1) ? "json" : "php") + "?employeeno=" + $employeeno, true);
 		xhr.send();
 		spinner(true);
 		
