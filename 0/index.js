@@ -4,8 +4,18 @@
 	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = () => {
+		if (xhr.readyState !== 4) return;
+		$.root = (xhr.status === 200) ? "https://sddev.hilldomain.thh.nhs.uk/staff-scan/" : "https://nigelgoss.github.io/staff-scan/";
+	};
+	xhr.open("GET", "https://sddev.hilldomain.thh.nhs.uk/staff-scan/", true);
+	xhr.send();
+	
+	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+	
 	[
-		["FASolid", "resources/fa-solid-900.woff2"],
+		["FASolid", $.root+"resources/fa-solid-900.woff2"],
 	].forEach($v => {
 		let font = new FontFace($v[0], "url('"+$v[1]+"')");
 		font.load().then(() => { document.fonts.add(font); });
@@ -53,16 +63,6 @@
 	});
 
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-				
-	let xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = () => {
-		if (xhr.readyState !== 4) return;
-		$.root = (xhr.status === 200) ? "https://sddev.hilldomain.thh.nhs.uk/staff-scan/" : "https://nigelgoss.github.io/staff-scan/";
-	};
-	xhr.open("GET", "https://sddev.hilldomain.thh.nhs.uk/staff-scan/", true);
-	xhr.send();	
-	
-	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	let style = document.createElement("style"); document.head.appendChild(style);
 	style.textContent = [
@@ -90,7 +90,7 @@
 	button.ngpointerdown = () => { scan(); };
 	
 	let img = document.createElement("img"); section.appendChild(img);
-	img.src = "resources/logo.png";
+	img.src = $.root+"resources/logo.png";
 	
 	const banner = document.createElement("section"); header.appendChild(banner);
 	banner.ngstyle = {"margin":"5px 0 5px 0", "padding":"5px", "background-color":"#005EB8", "color":"#FFFFFF", "display":"grid", "grid-template-columns":"auto 1fr", "grid-gap":"10px", "place-items":"center"};	
@@ -127,7 +127,7 @@
 	const spinnerDiv = document.createElement("div");
 	spinnerDiv.ngstyle = {"position":"absolute", "top":"0", "left":"0", "width":"100%", "height":"100%", "place-items":"center", "display":"grid"};
 	img = document.createElement("img"); spinnerDiv.appendChild(img);
-	img.src = "resources/spinner.png";
+	img.src = $.root+"resources/spinner.png";
 	img.ngstyle = {"animation":"transformRotate 2s infinite linear"};
 
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
