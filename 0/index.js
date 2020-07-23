@@ -303,7 +303,7 @@
 		if (typeof cordova !== "undefined") {
 			cordova.plugins.barcodeScanner.scan($d => { query($d.text, $d => { build($d); }); });
 		} else {
-			query({"text":prompt("Employee no.")}, $d => { build($d); });
+			query(prompt("Employee no."), $d => { build($d); });
 		};
 	};
 
