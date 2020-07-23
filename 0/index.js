@@ -1,5 +1,13 @@
 (() => {
 
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = () => {
+		if (xhr.readyState !== 4) return;
+		$.root = (xhr.status === 200) ? "https://sddev.hilldomain.thh.nhs.uk/staff-scan/" : "https://nigelgoss.github.io/staff-scan/";
+	};
+	xhr.open("GET", "https://sddev.hilldomain.thh.nhs.uk/staff-scan/", true);
+	xhr.send();	
+	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	[
@@ -91,11 +99,10 @@
 		const xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState !== 4) return;
-			if (xhr.status == 200) $success(JSON.parse(xhr.responseText));
+			if (xhr.status === 200) $success(JSON.parse(xhr.responseText));
 			spinner(false);
 		};
-		let url = ($employeeno === "999999999") ? "https://nigelgoss.github.io/staff-scan/$/api.json" : "https://sddev.hilldomain.thh.nhs.uk/staff-scan/$/api.php";
-		xhr.open("GET", url + "?employeeno=" + $employeeno, true);
+		xhr.open("GET", $.root + "api." + (($.root.indexOf("github") > -1) ? "json" : "php") + "?employeeno=" + $employeeno, true);
 		xhr.send();
 		spinner(true);
 		
@@ -292,7 +299,7 @@
 		if (typeof cordova !== "undefined") {
 			cordova.plugins.barcodeScanner.scan($d => { query($d.text, $d => { build($d); }); });
 		} else {
-			query({"text":"999999999"}, $d => { build($d); });
+			query({"text":prompt("Employee no.")}, $d => { build($d); });
 		};
 	};
 
