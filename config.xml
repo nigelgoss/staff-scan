@@ -5,8 +5,8 @@
 	
 	<preference name="phonegap-version" value="cli-9.0.0" />
 		
-	<name>hObs</name>
-	<description>Electronic Observations</description>
+	<name>Staff Scan</name>
+	<description>Staff records viewer</description>
 	<author email="nigel.goss@nhs.net" href="http://www.thh.nhs.uk/">Systems Development, The Hillingdon Hospitals NHS FT</author>
 	
 	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
