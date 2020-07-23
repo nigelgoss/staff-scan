@@ -193,8 +193,7 @@
 			clear();
 			if (typeof cordova !== "undefined") {
 				cordova.plugins.barcodeScanner.scan($d => {
-					alert($d.cancelled);
-					if ($d.cancelled === true) return;
+					if ($d.cancelled === 1) return;
 					query($d.text, $d => { build($d); });
 				});
 			} else {
