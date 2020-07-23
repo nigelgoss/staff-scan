@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="uk.nhs.thh.ng" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<preference name="phonegap-version" value="cli-9.0.0" />
+		
+	<name>hObs</name>
+	<description>Electronic Observations</description>
+	<author email="nigel.goss@nhs.net" href="http://www.thh.nhs.uk/">Systems Development, The Hillingdon Hospitals NHS FT</author>
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<access origin="*" />
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<platform name="ios" />
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<icon src="icon-29@2x.png" width="58" height="58" />
+	<icon src="icon-40@2x.png" width="80" height="80" />
+	<icon src="icon-76@2x.png" width="152" height="152" />
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<splash src="Default@2x~universal~anyany.png" />
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="KeyboardDisplayRequiresUserAction" value="false" />
+	<preference name="SuppressesLongPressGesture" value="true" />
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+		
+	<edit-config target="UIStatusBarHidden" file="*-Info.plist" mode="overwrite" platform="ios">
+		<true/>
+	</edit-config>
+
+	<edit-config target="UIViewControllerBasedStatusBarAppearance" file="*-Info.plist" mode="overwrite" platform="ios">
+		<false/>
+	</edit-config>
+	
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+		
+	<plugin name="cordova-plugin-device" />
+	
+	<plugin name="cordova-plugin-dialogs" />
+	
+	<plugin name="cordova-plugin-inappbrowser" />
+	
+	<plugin name="cordova-plugin-camera" />
+	<plugin name="phonegap-plugin-barcodescanner" />
+	<edit-config platform="ios" file="*-Info.plist" mode="merge" target="NSCameraUsageDescription"><string>Image capture / Scan barcodes</string></edit-config>
+
+	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+	
+</widget>
