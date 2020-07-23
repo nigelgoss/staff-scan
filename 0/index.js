@@ -157,17 +157,18 @@
 		fieldset.ngstyle = {"border":"2px solid #005EB8", "margin":"2px"};
 		let legend = document.createElement("legend"); fieldset.appendChild(legend);
 		legend.textContent = "Fit Mask Testing";
-		section = document.createElement("section"); fieldset.appendChild(section);
-		section.ngstyle = {"display":"grid", "grid-template-columns":"repeat(3, auto)"};
+		let table = document.createElement("table"); fieldset.appendChild(table);
+		table.ngstyle = {"border-collapse":"collapse", "width":"100%"};
 		
 		Object.keys($d[1][0]).forEach($v => {
-			let div = document.createElement("div"); section.appendChild(div);
-			div.textContent = $v;
-			div.ngstyle = {"font-weight":"bold"};
+			let tr = document.createElement("tr"); table.appendChild(tr);
+			let td = document.createElement("td"); tr.appendChild(td);
+			td.textContent = $v;
+			td.ngstyle = {"font-weight":"bold"};
 			Object.keys($d[1][0][$v]).forEach($v2 => {
-				let div = document.createElement("div"); section.appendChild(div);
-				let em = document.createElement("em"); div.appendChild(em); em.textContent = $v2;
-				div.appendChild(document.createTextNode(" " + $d[1][0][$v][$v2]));
+				td = document.createElement("td"); tr.appendChild(td);
+				let em = document.createElement("em"); td.appendChild(em); em.textContent = $v2;
+				td.appendChild(document.createTextNode(" " + $d[1][0][$v][$v2]));
 			});
 		});
 		
