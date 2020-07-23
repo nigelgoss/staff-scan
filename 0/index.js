@@ -137,10 +137,16 @@
 
 		// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
-		const build = ($d) => {
-
+		const clear = () => {
+			
 			banner.textContent = "";
 			main.textContent = "";
+		
+		};
+		
+		// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+		
+		const build = ($d) => {
 
 			let img = document.createElement("img"); banner.appendChild(img);
 			img.ngstyle = {"grid-row":"span 3", "width":"80px", "border-radius":"100%", "border":"2px solid #FFFFFF"};
@@ -184,8 +190,12 @@
 		// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
 		const scan = () => {
+			clear();
 			if (typeof cordova !== "undefined") {
-				cordova.plugins.barcodeScanner.scan($d => { query($d.text, $d => { build($d); }); });
+				cordova.plugins.barcodeScanner.scan($d => {
+					if ($d.cancelled === true) return;
+					query($d.text, $d => { build($d); });
+				});
 			} else {
 				query(prompt("Employee no."), $d => { build($d); });
 			};
