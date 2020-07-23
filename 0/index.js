@@ -1,12 +1,6 @@
 (() => {
 
-	let xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = () => {
-		if (xhr.readyState !== 4) return;
-		$.root = (xhr.status === 200) ? "https://sddev.hilldomain.thh.nhs.uk/staff-scan/" : "https://nigelgoss.github.io/staff-scan/";
-	};
-	xhr.open("GET", "https://sddev.hilldomain.thh.nhs.uk/staff-scan/", true);
-	xhr.send();	
+	window.$ = {};
 	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
@@ -58,6 +52,16 @@
 
 	});
 
+	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+				
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = () => {
+		if (xhr.readyState !== 4) return;
+		$.root = (xhr.status === 200) ? "https://sddev.hilldomain.thh.nhs.uk/staff-scan/" : "https://nigelgoss.github.io/staff-scan/";
+	};
+	xhr.open("GET", "https://sddev.hilldomain.thh.nhs.uk/staff-scan/", true);
+	xhr.send();	
+	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	let style = document.createElement("style"); document.head.appendChild(style);
