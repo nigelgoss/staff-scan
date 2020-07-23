@@ -144,7 +144,7 @@
 
 			let img = document.createElement("img"); banner.appendChild(img);
 			img.ngstyle = {"grid-row":"span 3", "width":"80px", "border-radius":"100%", "border":"2px solid #FFFFFF"};
-			img.src = "resources/user.jpg";
+			img.src = $.root+"resources/user.jpg";
 
 			let div = document.createElement("div"); banner.appendChild(div);
 			div.textContent = $d[0][0].Name;
