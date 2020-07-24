@@ -147,6 +147,8 @@
 		// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 		
 		const build = ($d) => {
+			
+			if ($d[0].length === 0) return;
 
 			let img = document.createElement("img"); banner.appendChild(img);
 			img.ngstyle = {"grid-row":"span 3", "width":"80px", "border-radius":"100%", "border":"2px solid #FFFFFF"};
@@ -172,18 +174,20 @@
 			legend.textContent = "Fit Mask Testing";
 			let table = document.createElement("table"); fieldset.appendChild(table);
 			table.ngstyle = {"border-collapse":"collapse", "width":"100%"};
+			let tr = document.createElement("tr"); table.appendChild(tr);
+			tr.ngstyle = {"font-weight":"bold"}; 
+			let td = document.createElement("td"); tr.appendChild(td); td.ngstyle = {"font-weight":"bold"}; td.textContent = "Mask";
+			td = document.createElement("td"); tr.appendChild(td); td.textContent = "Tested";
+			td = document.createElement("td"); tr.appendChild(td); td.textContent = "Status";
 
-			Object.keys($d[1][0]).forEach($v => {
-				let tr = document.createElement("tr"); table.appendChild(tr);
-				let td = document.createElement("td"); tr.appendChild(td);
-				td.textContent = $v;
-				td.ngstyle = {"font-weight":"bold"};
-				Object.keys($d[1][0][$v]).forEach($v2 => {
-					td = document.createElement("td"); tr.appendChild(td);
-					let em = document.createElement("em"); td.appendChild(em); em.textContent = $v2;
-					td.appendChild(document.createTextNode(" " + $d[1][0][$v][$v2]));
-				});
+			$d[1].forEach($v => {
+				tr = document.createElement("tr"); table.appendChild(tr);
+				td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Mask;
+				td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Tested;
+				td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Status;
 			});
+			
+			// ----- -----
 
 		};
 
